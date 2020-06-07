@@ -1,11 +1,12 @@
-package Client;
+package Client2.Client;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.*;
-
-import static java.lang.Thread.sleep;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.SocketException;
 
 
 public class ChatClient {
@@ -74,7 +75,7 @@ class SendMSG implements Runnable {
                     e.printStackTrace();
                 }
                 try {
-                    sleep(100);
+                    Thread.sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
